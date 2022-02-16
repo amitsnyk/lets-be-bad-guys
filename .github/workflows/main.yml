@@ -12,3 +12,8 @@ jobs:
         with:
           args: --severity-threshold=high
           json: true
+      - name: Upload Snyk scan results
+        uses: actions/upload-artifact@master
+        with:
+           name: snyk-scan-results
+           path: artifacts/snyk-scan-results.json
