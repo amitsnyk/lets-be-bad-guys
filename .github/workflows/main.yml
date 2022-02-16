@@ -11,9 +11,8 @@ jobs:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
         with:
           args: --severity-threshold=high
-          json: true
       - name: Upload Snyk scan results
-        uses: actions/upload-artifact@main
+        uses: actions/upload-artifact@v2
         with:
-           name: snyk-scan-results
-           path: artifacts/snyk-scan-results.json
+           name: Snyk Report
+           path: results.html
