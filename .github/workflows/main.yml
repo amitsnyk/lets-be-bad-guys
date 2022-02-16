@@ -14,5 +14,5 @@ jobs:
       - name: Upload Snyk scan results
         uses: actions/upload-artifact@v2
         with:
-           name: Snyk Report
-           path: results.html
+          name: Snyk Report
+          path: results.html
