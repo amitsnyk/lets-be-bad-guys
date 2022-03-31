@@ -1,11 +1,8 @@
 version: 0.2
-
 phases:
-  pre_build:
-    commands:
-      - pip3 install awscli --upgrade --user
-      - aws codeartifact login --tool pip --domain demo-domain --domain-owner 539990990416 --repository all-repos
-  
   build:
     commands:
-      - pip install requests
+      - pip install -e .
+artifacts:
+  files:
+    - '**/*'
